@@ -2,15 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
-const config = {
-  apiKey: "AIzaSyACJHtwwq9uRqmFkrcabUtMaYN_PKXLfAg",
-  authDomain: "my-store-87e34.firebaseapp.com",
-  databaseURL: "https://my-store-87e34.firebaseio.com",
-  projectId: "my-store-87e34",
-  storageBucket: "my-store-87e34.appspot.com",
-  messagingSenderId: "227389685967",
-  appId: "1:227389685967:web:4757e8511b9900f14e37ba"
-};
+const config = {};
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
@@ -27,7 +19,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log("error creating user", error.message);
