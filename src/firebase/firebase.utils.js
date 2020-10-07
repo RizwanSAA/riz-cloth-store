@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
+// use config object from google's firebase project
 const config = {};
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
